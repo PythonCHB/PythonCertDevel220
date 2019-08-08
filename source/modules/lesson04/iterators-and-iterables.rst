@@ -36,16 +36,15 @@ did was stored in a sequence or involved manipulating one.
 
         for item in a_sequence:
             do_something_with_item
+ So fairly early in Python2, Python introduced the idea of the
+ "iterable".  An iterable is something you can, well, iterate over in a
+ for loop, but often does not keep the whole sequence in memory at
+ once.  After all, why make a copy of something just to look at all its
+ items?
 
-|
-| So fairly early in Python2, Python introduced the idea of the
-  "iterable".  An iterable is something you can, well, iterate over in a
-  for loop, but often does not keep the whole sequence in memory at
-  once.  After all, why make a copy of something just to look at all its
-  items?
-| For example, in python2: \`\`dict.keys()\`\` returns a list of all the
-  keys in the dict.  But why make a full copy of all the keys, when all
-  you want to do is:
+For example, in python2: ``dict.keys()`` returns a list of all the
+keys in the dict.  But why make a full copy of all the keys, when all
+you want to do is:
 
 ::
 
